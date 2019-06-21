@@ -129,7 +129,7 @@ class SiswaController extends Controller
     {
         $siswa = siswa::find($id);
         $input = $request->all();
-        if (!siswa) {
+        if (!$siswa) {
             $response = [
                 'success' => false,
                 'data' => 'empty',
@@ -167,6 +167,21 @@ class SiswaController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $siswa = siswa::find($id);
+        if (!$siswa) {
+            $response = [
+                'success' => false,
+                'data' => 'empty',
+                'message' => 'siswa tidak ditemukan.'
+            ];
+            return response()->json($response, 404);
+        }
+        $siswa->delete();
+        $response = [
+            'success' => true,
+            'data' => $siswa,
+            'message' => 'Berhasil di delete.'
+        ];
+        return response()->json($response, 200);
     }
 }
