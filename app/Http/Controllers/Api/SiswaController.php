@@ -127,7 +127,36 @@ class SiswaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $siswa = siswa::find($id);
+        $input = $request->all();
+        if (!siswa) {
+            $response = [
+                'success' => false,
+                'data' => 'empty',
+                'message' => 'siswa tidak ditemukan.'
+            ];
+            return response()->json($response, 404);
+        }
+        $validator = Validator::make($input, [
+            'nama' => 'required|min:15'
+        ]);
+        // 3. cek validasi
+        if ($validator->fails()) {
+            $response = [
+                'success' => false,
+                'data' => 'Validator error .',
+                'message' => $validator->errors()
+            ];
+            return response()->json($response, 500);
+        }
+        $siswa->nama = $input['nama'];
+        $siswa->save();
+        $response = [
+            'success' => true,
+            'data' => $siswa,
+            'message' => 'Berhasil di update.'
+        ];
+        return response()->json($response, 200);
     }
 
     /**
