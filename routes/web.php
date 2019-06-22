@@ -24,21 +24,18 @@ Route::get('/', function () {
 Route::get('/admin', function () {
     return view('backend');
 });
-Route::get('about', function () {
-    return view('about');
+Route::get('archive', function () {
+    return view('archive');
 });
-Route::get('/blog', function () {
-    return view('blog');
+Route::get('/category', function () {
+    return view('category');
 });
-Route::get('/contack', function () {
-    return view('contack');
+Route::get('/post-details', function () {
+    return view('post-details');
 });
-Route::get('/services', function () {
-    return view('services');
+Route::get('/elements', function () {
+    return view('elements');
 });
-Route::get('/work', function () {
-    return view('work');
-});
-Route::get('/work-single', function () {
-    return view('work-single');
+Route::get('/contact', function () {
+    return view('contact');
 });
