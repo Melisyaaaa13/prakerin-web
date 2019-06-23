@@ -45,16 +45,16 @@
 					</div>
 					<nav id="nav-menu-container" class="mx-auto">
 						<ul class="nav-menu">
-							<li><a href="index.html">Home</a></li>
-							<li><a href="archive.html">Archive</a></li>
-							<li><a href="category.html">Category</a></li>
+							<li><a href="/">Home</a></li>
+							<li><a href="{{ url('archive') }}">Archive</a></li>
+							<li><a href="{{ url('category') }}">Category</a></li>
 							<li class="menu-has-children menu-active"><a href="">Pages</a>
 								<ul>
-									<li><a href="post-details.html">Post Details</a></li>
-									<li><a href="elements.html">Elements</a></li>
+									<li><a href="{{ url('post-details') }}">Post Details</a></li>
+									<li><a href="{{ url('elements') }}">Elements</a></li>
 								</ul>
 							</li>
-							<li><a href="contact.html">Contact</a></li>
+							<li><a href="{{ url('contact') }}">Contact</a></li>
 						</ul>
 					</nav>
 					<div class="navbar-right ml-auto">
