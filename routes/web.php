@@ -18,24 +18,45 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/listtimeline', function () {
+    return view('listtimeline');
 });
-Route::get('/admin', function () {
-    return view('backend');
+Route::get('/detailstandart', function () {
+    return view('detailstandart');
 });
-Route::get('archive', function () {
-    return view('archive');
+Route::get('/detailslim', function () {
+    return view('detailslim');
 });
-Route::get('/category', function () {
-    return view('category');
+Route::get('/detailsidebar', function () {
+    return view('detailsidebar');
 });
-Route::get('/post-details', function () {
-    return view('post-details');
+Route::get('/videoplayer', function () {
+    return view('videoplayer');
 });
-Route::get('/elements', function () {
-    return view('elements');
+Route::get('/aboutus', function () {
+    return view('aboutus');
+});
+Route::get('/authors', function () {
+    return view('authors');
 });
 Route::get('/contact', function () {
     return view('contact');
 });
+Route::get('/privacy', function () {
+    return view('privacy');
+});
+Route::get('/admin', function () {
+    return view('backend');
+});
+//admin
+Route::group(
+    ['prefix' => 'admin', 'middleware' => ['auth']],
+    function () {
+        Route::get('/', function () {
+            return view('home');
+        });
+        Route::resource('kategori', 'Kategori_Controller');
+        Route::resource('tag', 'Tag_Controller');
+        Route::resource('artikel', 'Artikel_Controller');
+    }
+);

@@ -1,280 +1,442 @@
 <!DOCTYPE html>
-<html lang="zxx" class="no-js">
+<html lang="en">
 
+<!-- Mirrored from tevratgundogdu.com/works/ideabox-html-template/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Jun 2019 03:05:14 GMT -->
 <head>
-	<!-- Mobile Specific Meta -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<!-- Favicon-->
-	<link rel="shortcut icon" href="img/fav.png">
-	<!-- Author Meta -->
-	<meta name="author" content="colorlib">
-	<!-- Meta Description -->
-	<meta name="description" content="">
-	<!-- Meta Keyword -->
-	<meta name="keywords" content="">
-	<!-- meta character set -->
 	<meta charset="UTF-8">
-	<!-- Site Title -->
-	<title>Contact</title>
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600|Roboto:400,600" rel="stylesheet">
-	<!--
-		CSS
-		============================================= -->
-	<link rel="stylesheet" href="css/linearicons.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="css/magnific-popup.css">
-	<link rel="stylesheet" href="css/nice-select.css">
-	<link rel="stylesheet" href="css/animate.min.css">
-	<link rel="stylesheet" href="css/owl.carousel.css">
-	<link rel="stylesheet" href="css/jquery-ui.css">
-	<link rel="stylesheet" href="css/main.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ideabox - Material Blog/Magazine Template</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600,700,900&amp;subset=latin-ext" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<!-- Tooltip plugin (zebra) css file -->
+	<link rel="stylesheet" type="text/css" href="plugins/zebra-tooltip/zebra_tooltips.min.css">
+
+	<!-- Ideabox main theme css file. you have to add all pages -->
+	<link rel="stylesheet" type="text/css" href="css/main-style.css">
+
+	<!-- Ideabox responsive css file -->
+	<link rel="stylesheet" type="text/css" href="css/responsive-style.css">
 </head>
 
 <body>
 
-	<!-- Start Header Area -->
-	<header>
-		<div class="main-menu" id="main-menu">
-			<div class="container">
-				<div class="row align-items-center justify-content-between">
-					<div>
-						<a class="navbar-brand" href="index.html">
-							<img src="img/logo.png" alt="">
-						</a>
-					</div>
-					<nav id="nav-menu-container" class="mx-auto">
-						<ul class="nav-menu">
-							<li><a href="/">Home</a></li>
-							<li><a href="{{ url('archive') }}">Archive</a></li>
-							<li><a href="{{ url('category') }}">Category</a></li>
-							<li class="menu-has-children"><a href="">Pages</a>
-								<ul>
-									<li><a href="{{ url('post-details') }}">Post Details</a></li>
-									<li><a href="{{ url('elements') }}">Elements</a></li>
-								</ul>
-							</li>
-							<li class="menu-active"><a href="{{ url('contact') }}">Contact</a></li>
-						</ul>
-					</nav>
-					<div class="navbar-right ml-auto">
-						<form class="Search">
-							<input type="text" class="form-control Search-box" name="Search-box" id="Search-box" placeholder="Search">
-							<label for="Search-box" class="Search-box-label">
-								<span class="lnr lnr-magnifier"></span>
-							</label>
-							<span class="Search-close">
-								<span class="lnr lnr-cross"></span>
-							</span>
-						</form>
-					</div>
-				</div>
+	<!-- header start -->
+	<header class="header">
+		<div class="header-wrapper">
+
+			<!--sidebar menu toggler start -->
+			<div class="toggle-sidebar material-button">
+				<i class="material-icons">&#xE5D2;</i>
 			</div>
+			<!--sidebar menu toggler end -->
+
+			<!--logo start -->
+			<div class="logo-box">
+				<h1>
+					<a href="index-2.html" class="logo"></a>
+				</h1>
+			</div>
+			<!--logo end -->
+
+			<div class="header-menu">
+
+			<!-- header left menu start -->
+				<ul class="header-navigation" data-show-menu-on-mobile>
+					<li>
+								<li><a href="{{ url('/') }}">HOME</a></li>
+						<div class="header-submenu">
+							<ul>
+
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#" class="material-button submenu-toggle">POSTS</a>
+						<div class="header-submenu">
+							<ul>
+								<li><a href="{{ url('listtimeline') }}">List timeline</a></li>
+								<li><a href="{{ url('detailstandart') }}">Detail standart</a></li>
+								<li><a href="{{ url('detailslim') }}">Detail adbox 2</a></li>
+								<li><a href="{{ url('detailsidebar') }}">Left sidebar adbox</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#" class="material-button submenu-toggle">VIDEO</a>
+						<div class="header-submenu">
+							<ul>
+								<li><a href="{{ url('videoplayer') }}">Video custom player</a></li>
+							</ul>
+						</div>
+					</li>
+					<li>
+						<a href="#" class="material-button submenu-toggle">EXTRA PAGES <i class="material-icons">&#xE313;</i></a>
+						<div class="header-submenu">
+							<ul>
+								<li><a href="{{ url('authors') }}">Authors</a></li>
+								<li><a href="{{ url('aboutus') }}">About us</a></li>
+								<li><a href="{{ url('privacy') }}">Privacy policy</a></li>
+								<li><a href="{{ url('contact') }}">Contact</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<!-- header left menu end -->
+
+			</div>
+			<div class="header-right with-seperator">
+
+				<!-- header right menu start -->
+				<ul class="header-navigation">
+					<li>
+						<a href="#" class="material-button search-toggle"><i class="material-icons">&#xE8B6;</i></a>
+					</li>
+					<li>
+						<a href="#" class="material-button submenu-toggle"><i class="material-icons">&#xE7FD;</i> <span class="hide-on-tablet">Account</span></a>
+						<div class="header-submenu">
+							<ul>
+								<li><a href="#" data-modal="loginModal">Login</a></li>
+								<li><a href="#" data-modal="registerModal">Register</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="hide-on-mobile"><a href="#" class="material-button" data-modal="newsletterModal"><i class="material-icons">&#xE0E1;</i></a></li>
+				</ul>
+				<!-- header right menu end -->
+
+			</div>
+
+			<!--header search panel start -->
+			<div class="search-bar">
+				<form class="search-form">
+					<div class="search-input-wrapper">
+						<input type="text" name="qq" placeholder="search something..." class="search-input">
+						<button type="submit" name="search" class="search-submit"><i class="material-icons">&#xE5C8;</i></button>
+					</div>
+					<span class="search-close search-toggle">
+						<i class="material-icons">&#xE5CD;</i>
+					</span>
+				</form>
+			</div>
+			<!--header search panel end -->
+
 		</div>
 	</header>
-	<!-- End Header Area -->
+	<!-- header end -->
 
-	<!-- Start top-post Area -->
-	<section class="top-post-area">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-lg-12 p-0">
-					<div class="hero-nav-area">
-						<h1 class="text-white">Contact Us</h1>
-						<p class="text-white link-nav">
-							<a href="index.html">Home </a>
-							<span class="lnr lnr-arrow-right"></span>
-							<a href="contact.html">Contact </a>
-						</p>
+
+	<!-- Left sidebar menu start -->
+	<div class="sidebar">
+		<div class="sidebar-wrapper">
+
+			<!-- side menu logo start -->
+			<div class="sidebar-logo">
+				<a href="#"></a>
+				<div class="sidebar-toggle-button">
+					<i class="material-icons">&#xE317;</i>
+				</div>
+			</div>
+			<!-- side menu logo end -->
+
+			<!-- showing on mobile screen sizes -->
+			<!-- mobile menu start -->
+			<div id="mobileMenu">
+				<div class="sidebar-seperate"></div>
+			</div>
+			<!-- mobile menu end -->
+
+			<!-- sidebar menu start -->
+			<ul class="sidebar-menu">
+				<li class="active">
+					<a href="#" class="material-button">
+						<span class="menu-icon"><i class="material-icons">&#xE88A;</i></span>
+	                	<span class="menu-label">Home</span>
+	                </a>
+	            </li>
+	            <li>
+					<a href="#" class="material-button">
+						<span class="menu-icon"><i class="material-icons">&#xE038;</i></span>
+	                	<span class="menu-label">Videos</span>
+	                </a>
+	            </li>
+	            <li>
+					<a href="#" class="material-button">
+						<span class="menu-icon"><i class="material-icons">&#xE0BF;</i></span>
+	                	<span class="menu-label">Posts</span>
+	                </a>
+	            </li>
+	            <li>
+					<a href="#" class="material-button">
+						<span class="menu-icon"><i class="material-icons">&#xE866;</i></span>
+	                	<span class="menu-label">Contact</span>
+	                </a>
+	            </li>
+	            <li>
+					<a href="#" class="material-button">
+						<span class="menu-icon"><i class="material-icons">&#xE8B0;</i></span>
+	                	<span class="menu-label">Multi Menu</span>
+	                	<span class="multimenu-icon"><i class="material-icons">&#xE313;</i></span>
+	                </a>
+	                <ul>
+	                	<li>
+	                		<a href="#"><span class="menu-label">Menu Level 1</span></a>
+	                	</li>
+	                	<li>
+	                		<a href="#"><span class="menu-label">Menu Level 2</span></a>
+	                	</li>
+	                	<li>
+	                		<a href="#"><span class="menu-label">Menu Level 3</span></a>
+	                	</li>
+	                </ul>
+	            </li>
+			</ul>
+			<!-- sidebar menu end -->
+
+			<div class="sidebar-seperate"></div>
+
+			<!-- sidebar menu start -->
+			<ul class="sidebar-menu">
+				<li>
+					<a href="#" class="material-button">
+						<span class="menu-icon"><i class="material-icons">&#xE88A;</i></span>
+	                	<span class="menu-label">Extra Menu One</span>
+	                </a>
+	            </li>
+	            <li>
+					<a href="#" class="material-button">
+						<span class="menu-icon"><i class="material-icons">&#xE8B0;</i></span>
+	                	<span class="menu-label">Extra Menu Two</span>
+	                </a>
+	            </li>
+	            <li>
+					<a href="#" class="material-button">
+						<span class="menu-icon"><i class="material-icons">&#xE038;</i></span>
+	                	<span class="menu-label">Extra Menu Three</span>
+	                </a>
+	            </li>
+			</ul>
+			<!-- sidebar menu end -->
+
+			<div class="sidebar-seperate"></div>
+
+			<!-- sidebar menu start -->
+			<ul class="sidebar-menu">
+				<li>
+					<a href="#" class="facebook material-button">
+	                	<span class="menu-label">Facebook</span>
+	                </a>
+	            </li>
+	            <li>
+					<a href="#" class="twitter material-button">
+	                	<span class="menu-label">Twitter</span>
+	                </a>
+	            </li>
+	            <li>
+					<a href="#" class="google-plus material-button">
+	                	<span class="menu-label">Google +</span>
+	                </a>
+	            </li>
+			</ul>
+			<!-- sidebar menu end -->
+		</div>
+	</div>
+	<!-- Left sidebar menu end -->
+
+	<!--Main container start -->
+	<main class="main-container">
+
+		<section class="main-content extra-pages">
+			<div class="main-content-wrapper add-to-margin">
+				<div class="content-body">
+
+					<!-- article body start -->
+					<article class="article-wrapper">
+						<div class="article-content">
+							<h1 class="extra-title">Contact</h1>
+							<div class="article-inner">
+								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+
+								<div class="contact-form">
+									<form id="contactFrom">
+										<div class="frm-row">
+											<div class="columns column-2">
+												<input type="text" name="nname" placeholder="Name" class="frm-input">
+											</div>
+											<div class="columns column-2">
+												<input type="text" name="eemail" placeholder="Email" class="frm-input">
+											</div>
+											<div class="columns column-2">
+												<input type="text" name="wwebsite" placeholder="Website" class="frm-input">
+											</div>
+											<div class="clearfix"></div>
+										</div>
+										<div class="frm-row">
+											<input type="text" name="ssubject" placeholder="Subject" class="frm-input">
+										</div>
+										<dic class="frm-row">
+											<textarea class="frm-input" rows="8" name="mmessage" placeholder="Enter your message"></textarea>
+										</dic>
+										<div class="frm-row send-button">
+											<button type="button" class="frm-button material-button">Send message</button>
+										</div>
+									</form>
+								</div>
+							</div>
+
+							<!--this is important for the left ad box or share box fixer -->
+							<div id="endOfTheArticle"></div>
+
+						</div>
+					</article>
+					<!-- article body end -->
+
+				</div>
+				<div class="content-sidebar">
+					<div class="sidebar_inner">
+
+						<div class="sidebar-spacer"></div>
+						<div class="sidebar-button-group">
+							<a href="about-us.html" class="sidebar-buttons material-button"><i class="material-icons">&#xE851;</i><span class="btn-label">About Us</span></a>
+							<a href="authors.html" class="sidebar-buttons material-button"><i class="material-icons">&#xE866;</i><span class="btn-label">Authors</span></a>
+							<a href="privacy-policy.html" class="sidebar-buttons material-button"><i class="material-icons">&#xE87F;</i><span class="btn-label">Privacy Policy</span></a>
+							<a href="contact.html" class="sidebar-buttons material-button active"><i class="material-icons">&#xE894;</i><span class="btn-label">Contacts</span></a>
+						</div>
+
 					</div>
 				</div>
 			</div>
-		</div>
-	</section>
-	<!-- End top-post Area -->
+		</section>
 
-	<!-- Start contact-page Area -->
-	<section class="contact-page-area section-gap">
-		<div class="container">
-			<div class="row contact-wrap">
-				<div class="map-wrap" style="width:100%; height: 445px;" id="map"></div>
-				<div class="col-lg-3 d-flex flex-column address-wrap">
-					<div class="single-contact-address d-flex flex-row">
-						<div class="icon">
-							<span class="lnr lnr-home"></span>
-						</div>
-						<div class="contact-details">
-							<h5>Los Angeles, USA</h5>
-							<p>
-								56/8, Rocky beach road
-							</p>
-						</div>
+	</main>
+
+	<!-- Register popup html source start -->
+	<div class="m-modal-box" id="registerModal">
+		<div class="m-modal-overlay"></div>
+		<div class="m-modal-content small">
+			<div class="m-modal-header">
+				<h3 class="m-modal-title">Register</h3>
+				<span class="m-modal-close"><i class="material-icons">&#xE5CD;</i></span>
+			</div>
+			<div class="m-modal-body">
+				<div class="m-modal-social-logins">
+					<div class="columns column-2">
+						<button class="frm-button facebook material-button full" type="button">Facebook</button>
 					</div>
-					<div class="single-contact-address d-flex flex-row">
-						<div class="icon">
-							<span class="lnr lnr-phone-handset"></span>
-						</div>
-						<div class="contact-details">
-							<h5>00 (440) 9865 562</h5>
-							<p>Mon to Fri 9am to 6 pm</p>
-						</div>
+					<div class="columns column-2">
+						<button class="frm-button twitter material-button full" type="button">Twitter</button>
 					</div>
-					<div class="single-contact-address d-flex flex-row">
-						<div class="icon">
-							<span class="lnr lnr-envelope"></span>
-						</div>
-						<div class="contact-details">
-							<h5>support@colorlib.com</h5>
-							<p>Send us your query</p>
-						</div>
+					<div class="columns column-2">
+						<button class="frm-button google material-button full" type="button">Google</button>
 					</div>
 				</div>
-				<div class="col-lg-9">
-					<form class="form-area contact-form text-right" id="myForm" action="mail.php" method="post">
-						<div class="row">
-							<div class="col-lg-6">
-								<input name="name" placeholder="Enter your name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'"
-								 class="common-input mb-15 form-control" required="" type="text">
 
-								<input name="email" placeholder="Enter email address" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"
-								 onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" class="common-input mb-15 form-control"
-								 required="" type="email">
-								<input name="subject" placeholder="Enter subject" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter subject'"
-								 class="common-input mb-15 form-control" required="" type="text">
-							</div>
-							<div class="col-lg-6">
-								<textarea class="common-textarea form-control" name="message" placeholder="Enter Messege" onfocus="this.placeholder = ''"
-								 onblur="this.placeholder = 'Enter Messege'" required=""></textarea>
-							</div>
-							<div class="col-lg-12">
-								<div class="alert-msg" style="text-align: left;"></div>
-								<button class="primary-btn fill" style="float: right;">Send Message</button>
-							</div>
-						</div>
-					</form>
+				<div class="m-modal-seperator"><span>OR</span></div>
+
+				<form>
+					<div class="frm-row">
+						<input class="frm-input" type="text" name="name" placeholder="Name">
+					</div>
+					<div class="frm-row">
+						<input class="frm-input" type="text" name="username" placeholder="Username">
+					</div>
+					<div class="frm-row">
+						<input class="frm-input" type="text" name="email" placeholder="Email">
+					</div>
+					<div class="frm-row">
+						<input class="frm-input" type="text" name="password" placeholder="Password">
+					</div>
+					<div class="frm-row">
+						<label class="frm-check-radio-label"><input type="checkbox" name="test"> <span>I accept your <a href="#">register policy</a>.</span></label>
+					</div>
+					<div class="frm-row">
+						<button class="frm-button material-button full" type="button">Register</button>
+					</div>
+				</form>
+				<div class="frm-row">
+					<p class="txt-center">Do you already have an account? <a href="#" data-modal="loginModal">Login</a></p>
 				</div>
 			</div>
 		</div>
-	</section>
-	<!-- End contact-page Area -->
+	</div>
+	<!-- Register popup html source end ---->
 
-	<!-- start footer Area -->
-	<footer class="footer-area section-gap-top">
-		<div class="container">
-			<div class="row pb-10">
-				<div class="col-lg-4 col-md-6">
-					<div class="single-footer-widget">
-						<div class="mb-30">
-							<img src="img/logo.png" alt="">
-						</div>
-						<p>
-							Technology and gadgets Adapter (MPA) is our favorite iPhone solution, since it lets you use the headphones
-							you’re most comfortable with. It has an iPhone-compatible jack at one end and a microphone module with an
-							Answer/End/Pause button and a female 3.5mm audio jack for connectingheadphones
-						</p>
+	<!-- Login popup html source start -->
+	<div class="m-modal-box" id="loginModal">
+		<div class="m-modal-overlay"></div>
+		<div class="m-modal-content small">
+			<div class="m-modal-header">
+				<h3 class="m-modal-title">Login</h3>
+				<span class="m-modal-close"><i class="material-icons">&#xE5CD;</i></span>
+			</div>
+			<div class="m-modal-body">
+				<div class="m-modal-social-logins">
+					<div class="columns column-3">
+						<button class="frm-button facebook material-button full" type="button">Facebook</button>
+					</div>
+					<div class="columns column-3">
+						<button class="frm-button google material-button full" type="button">Google</button>
 					</div>
 				</div>
-				<div class="col-lg-4 col-md-6">
-					<div class="single-footer-widget">
-						<h6 class="heading">Quick Links</h6>
-						<div class="row">
-							<ul class="col footer-nav">
-								<li><a href="#">Sitemaps</a></li>
-								<li><a href="#">Categories</a></li>
-								<li><a href="#">Archives</a></li>
-								<li><a href="#">Advertise</a></li>
-								<li><a href="#">Ad Choice</a></li>
-							</ul>
-							<ul class="col footer-nav">
-								<li><a href="#">Privacy Policy</a></li>
-								<li><a href="#">Terms of Use</a></li>
-								<li><a href="#">Help Center</a></li>
-								<li><a href="#">Newsletters</a></li>
-								<li><a href="#">Feedback</a></li>
-							</ul>
-						</div>
+
+				<div class="m-modal-seperator"><span>OR</span></div>
+
+				<form>
+					<div class="frm-row">
+						<input class="frm-input" type="text" name="email" placeholder="Email">
 					</div>
-				</div>
-				<div class="col-lg-4 col-md-12">
-					<div class="single-footer-widget mail-chimp">
-						<h6 class="heading">Most Viewed News</h6>
-						<div class="footer-news">
-							<div class="single-news d-flex">
-								<div class="image">
-									<img class="img-fluid" src="img/n1.jpg" alt="">
-								</div>
-								<div class="details">
-									<a href="#">
-										<h4>Converter Ipod Video Taking Portable
-											Video Viewing To A Whole Level</h4>
-									</a>
-									<div class="d-flex justify-content-between">
-										<p>March 14, 2018</p>
-										<p class="meta">
-											<span class="lnr lnr-bubble"></span>
-											<span class="likes">04</span>
-										</p>
-									</div>
-								</div>
-							</div>
-							<div class="single-news d-flex">
-								<div class="image">
-									<img class="img-fluid" src="img/n2.jpg" alt="">
-								</div>
-								<div class="details">
-									<a href="#">
-										<h4>Converter Ipod Video Taking Portable
-											Video Viewing To A Whole Level</h4>
-									</a>
-									<div class="d-flex justify-content-between">
-										<p>March 14, 2018</p>
-										<p class="meta">
-											<span class="lnr lnr-bubble"></span>
-											<span class="likes">04</span>
-										</p>
-									</div>
-								</div>
-							</div>
-						</div>
+					<div class="frm-row">
+						<input class="frm-input" type="text" name="password" placeholder="Password">
 					</div>
+					<div class="frm-row">
+						<button class="frm-button material-button full" type="button">Login</button>
+					</div>
+				</form>
+				<div class="frm-row">
+					<p class="txt-center">Don't you have an account yet? <a href="#" data-modal="registerModal">Register</a></p>
 				</div>
 			</div>
 		</div>
-		<div class="copyright-text">
-			<div class="container">
-				<div class="row footer-bottom d-flex justify-content-between">
-					<p class="col-lg-8 col-sm-6 footer-text m-0 text-white"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-					<div class="col-lg-4 col-sm-6 footer-social">
-						<a href="#"><i class="fa fa-facebook"></i></a>
-						<a href="#"><i class="fa fa-twitter"></i></a>
-						<a href="#"><i class="fa fa-youtube-play"></i></a>
-						<a href="#"><i class="fa fa-pinterest"></i></a>
-						<a href="#"><i class="fa fa-rss"></i></a>
+	</div>
+	<!-- Login popup html source end -->
+
+	<!-- Newsletter popup html source start -->
+	<div class="m-modal-box" id="newsletterModal">
+		<div class="m-modal-overlay"></div>
+		<div class="m-modal-content small">
+			<div class="m-modal-header">
+				<h3 class="m-modal-title">Newsletter</h3>
+				<span class="m-modal-close"><i class="material-icons">&#xE5CD;</i></span>
+			</div>
+			<div class="m-modal-body">
+				<p>Submit to our newsletter to receive exclusive stories delivered to you inbox!</p>
+				<form>
+					<div class="frm-row">
+						<input class="frm-input" type="text" name="email" placeholder="Email address">
 					</div>
-				</div>
+					<div class="frm-row">
+						<button class="frm-button material-button full" type="button">Send</button>
+					</div>
+				</form>
 			</div>
 		</div>
-	</footer>
-	<!-- End footer Area -->
+	</div>
+	<!-- Newsletter popup html source end -->
 
-	<script src="js/vendor/jquery-2.2.4.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-	 crossorigin="anonymous"></script>
-	<script src="js/vendor/bootstrap.min.js"></script>
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
-	<script src="js/easing.min.js"></script>
-	<script src="js/hoverIntent.js"></script>
-	<script src="js/superfish.min.js"></script>
-	<script src="js/jquery.ajaxchimp.min.js"></script>
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="js/mn-accordion.js"></script>
-	<script src="js/jquery-ui.js"></script>
-	<script src="js/jquery.nice-select.min.js"></script>
-	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/mail-script.js"></script>
-	<script src="js/main.js"></script>
+	<div class="overlay"></div>
+
+	<script src="js/jquery-3.2.1.min.js"></script>
+
+	<!-- Tooltip plugin (zebra) js file -->
+	<script src="plugins/zebra-tooltip/zebra_tooltips.min.js"></script>
+
+	<!-- Ideabox theme js file. you have to add all pages. -->
+	<script src="js/main-script.js"></script>
+
+
 </body>
 
+
+<!-- Mirrored from tevratgundogdu.com/works/ideabox-html-template/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 25 Jun 2019 03:05:14 GMT -->
 </html>
